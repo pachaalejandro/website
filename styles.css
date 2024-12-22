@@ -1,0 +1,477 @@
+/* Global */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077cc;
+    position: sticky;
+    top: 0;
+    height: 64px;
+    padding: 0 4px;
+    z-index: 10;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    padding: 4px;
+}
+.slogan {
+    font-size: 0.85em;
+    margin-left: 4px;
+}
+.nav {
+    display: flex;
+    gap: 1px;
+    list-style: none;
+}
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 4px;
+    font-size: 0.85em;
+    padding: 8px 12px;
+    transition: all 0.5s;
+}
+.nav a:hover {
+    transform: scale(1.15);
+    color: #b0b0b0;
+}
+.nav a:active {
+    color: #404040;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+/* Responsive mobile/tablet */
+@media (max-width: 1024px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #0077cc;
+        position: absolute;
+	top: 64px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Header scripts */
+.header-scripts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3ea6ff;
+    height: 32px;
+    color: #ffffff;
+    font-size: 0.85em;
+}
+.header-scripts div {
+    margin: 0 16px;
+}
+
+/* Mains */
+.background-container {
+    position: relative;
+}
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Section Nosotros */
+#nosotros {
+    background-color: #FFFF00; /* Yellow background */
+    color: #000000; /* Black text */
+    text-align: center;
+    padding: 20px 0;
+}
+
+#nosotros h2 {
+    margin-bottom: 16px;
+    font-size: 1.5em;
+}
+
+#nosotros p {
+    width: 340px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+#ubicacion {
+    background-color: #f7f7f7; /* Fondo claro */
+    color: #333333; /* Texto oscuro */
+    text-align: center;
+    padding: 20px;
+}
+
+#ubicacion h2 {
+    margin-bottom: 16px;
+    font-size: 1.8em;
+}
+
+#ubicacion p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Section Comunidad */
+#comunidad {
+    background-color: #FF0000; /* Rojo de fondo */
+    color: #FFFFFF; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
+#comunidad h2 {
+    margin-bottom: 16px;
+    font-size: 1.8em;
+}
+
+#comunidad p {
+    margin: 0 auto 20px auto;
+    width: 340px;
+    line-height: 1.6;
+}
+
+#comunidad .social-links {
+    list-style: none; /* Quitar los bullets */
+    padding: 0;
+    margin: 0; /* Asegurar alineación centrada */
+    display: flex;
+    flex-direction: column; /* Distribuir los elementos uno debajo del otro */
+    align-items: center;
+    gap: 20px; /* Espaciado entre botones */
+}
+
+#comunidad .social-links li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #CC0000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 240px; /* Tamaño uniforme */
+    text-align: center;
+    font-size: 1rem; /* Ajustar tamaño de texto e íconos */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre ícono y texto */
+    justify-content: center;
+}
+
+#comunidad .social-links li a:hover {
+    background-color: #FF6666; /* Color más claro al hacer hover */
+    transform: scale(1.1); /* Animación de agrandar un poco */
+}
+
+/* Estilos generales para el contenedor */
+#contacto {
+  background-color: #28a745; /* Fondo verde */
+  color: white; /* Texto blanco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura completa de la ventana */
+  padding: 20px;
+}
+
+/* Título */
+#contacto h2 {
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-size: 2em; /* Tamaño de fuente mayor */
+  text-align: center;
+  font-weight: bold;
+  color: white; /* Asegura que el título sea blanco */
+}
+
+/* Formulario */
+form {
+  background-color: #2d6a34; /* Color de fondo ligeramente más oscuro para el formulario */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+/* Estilo de los labels */
+label {
+  display: block;
+  margin-bottom: 10px; /* Espacio entre label y campo de texto */
+  font-size: 1.1em; /* Tamaño de fuente ligeramente mayor */
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 94%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Estilo de los botones */
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #218838; /* Color más oscuro para el botón */
+  color: white;
+}
+
+/* Botón de reset con color rojo */
+button[type="reset"] {
+  background-color: #dc3545;
+}
+
+/* Botón de submit con color verde */
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+/* Botones alineados uno al lado del otro */
+button[type="reset"],
+button[type="submit"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 400px) {
+  #contacto {
+    padding: 10px;
+  }
+  form {
+    padding: 15px;
+  }
+}
+
+/* Section BuscarFiltros */
+#buscarfiltros {
+    background-color: #FFA500; /* Naranja de fondo */
+    color: #000000; /* Texto negro */
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buscarfiltros .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+}
+
+#buscarfiltros h2 {
+    margin-bottom: 16px;
+    font-size: 1.8em;
+}
+
+#buscarfiltros .buttons {
+    display: flex; /* Botones en la misma línea */
+    justify-content: space-between; /* Distribuir botones de manera uniforme */
+    gap: 5px; /* Espaciado reducido entre botones */
+}
+
+#buscarfiltros .buttons button {
+    background-color: #C0C0C0; /* Fondo gris */
+    color: #000000; /* Texto negro */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px; /* Padding reducido */
+    font-size: 0.8rem; /* Tipografía más pequeña */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1; /* Cada botón toma el mismo tamaño */
+    max-width: 90px; /* Limita el ancho de cada botón */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+#buscarfiltros .buttons button:hover {
+    background-color: #A9A9A9; /* Fondo más oscuro al hacer hover */
+    transform: scale(1.05); /* Agrandar ligeramente */
+}
+
+#buscarfiltros .buttons button.active {
+    background-color: #000000; /* Fondo negro */
+    color: #FFFFFF; /* Texto blanco */
+}
+
+#buscarfiltros .search-bar {
+    margin-top: 20px;
+    display: flex; /* Asegura que los elementos estén en una misma línea */
+    align-items: stretch; /* Ambos elementos tendrán el mismo alto */
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+#buscarfiltros .search-bar input {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    border: none;
+    outline: none;
+    padding: 10px; /* Padding uniforme */
+    font-size: 0.9rem; /* Tipografía más pequeña */
+    height: auto; /* Ajusta el alto automáticamente */
+    line-height: normal; /* Centra el texto verticalmente dentro del input */ /* <-- AGREGAR ESTA LÍNEA */
+}
+
+#buscarfiltros .search-bar button {
+    background-color: #C0C0C0; /* Fondo gris */
+    color: #000000;
+    border: none;
+    padding: 6px 20px; /* Espaciado uniforme */
+    font-size: 1.1rem; /* Tipografía más pequeña */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buscarfiltros .search-bar button:hover {
+    background-color: #A9A9A9; /* Fondo más oscuro al hacer hover */
+}
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    background-color: #0077cc;
+    color: #ffffff;
+}
+@media (min-width: 720px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.cards div {
+    background-color: #ffffff;
+    color: #0077cc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #0077cc;
+    color: #ffffff;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+.footer-block {
+    text-align: center;
+}
+.footer-logo {
+    margin-bottom: 8px;
+}
+.footer-block p, .footer-block a {
+    font-size: 0.85em;
+    margin: 4px 0;
+    color: #ffffff;
+}
+.footer-block a {
+    text-decoration: none;
+}
+.footer-block a:hover {
+    color: #3ea6ff;
+}
+.footer-block form {
+    display: flex;
+    flex-direction: column;
+}
+.footer-block input, .footer-block button {
+    margin: 4px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+.footer-block button {
+    background-color: #ffffff;
+    color: #0077cc;
+    cursor: pointer;
+}
+.footer-block button:hover {
+    background-color: #005ea6;
+    color: #ffffff;
+}
+
+#goToTopButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0077cc; /* Color azul */
+    color: #ffffff; /* Color blanco para el ícono */
+    font-size: 20px; /* Tamaño del ícono */
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none; /* Ocultar inicialmente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#goToTopButton i {
+    display: inline-block; /* Asegura la alineación del ícono */
+}
+
+#goToTopButton:hover {
+    background-color: #005ea6; /* Color más oscuro al hacer hover */
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+}

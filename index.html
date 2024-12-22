@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseGamePlusMods (AR)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="head.js" defer></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="img/logo.png" width=64px alt="Logo" class="logo">
+                <span class="slogan">Explora, descarga y mejora tu experiencia</span>
+            </div>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#comunidad">Comunidad</a>
+                <a href="#buscarfiltros">Descargas</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#registro">Registro</a>
+                <a href="#login">Login</a>
+            </nav>
+            <div class="menu-toggle">
+                &#9776;
+            </div>
+        </div>
+        <div class="header-scripts">
+            <!-- Widget del clima -->
+            <div class="widget-clima" id="clima">
+                <p>Buenos Aires: <span id="temperatura">Cargando...</span></p>
+            </div>
+            
+            <!-- Widget de la hora -->
+            <div class="widget-hora" id="hora">
+                <p><span id="horaActual">Cargando...</span> ARG (GMT-3)</p>
+            </div> 
+        </div>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <div class="background-container">
+            <picture>
+                <source media="(min-width: 1600px)" srcset="img/back1600.jpg">
+                <source media="(min-width: 1024px)" srcset="img/back1024.jpg">
+                <source media="(min-width: 720px)" srcset="img/back720.jpg">
+                <img src="img/back360.jpg" alt="Background" class="background-image">
+            </picture>
+        </div>
+
+       <section id="nosotros">
+            <h2>Acerca de (Nosotros)</h2>
+            <p>
+                Resultado del trabajo practico del curso TalentoTech, curso de Front-End JS.<br>Dictado por el profesor:<br>Alejandro Zapata<br> (Comisión #24234).
+            </p>
+	   <p>- - -</p>
+            <p>
+                Alumno:<br>Pacheco Norberto Alejandro<br>(DNI 25.669.259).<br>
+            </p>
+	   <p>- - -</p>
+            <p>
+                Tareas Realizadas<br>Menú Hamburguesa<br> Utilizando Mediaqueries Tablet (720px) - Mobile (360px)<br>Formularios:<br> Registro - Login - Contacto - Newsletter<br>Integración de I-Frames<br>y<br>funcionalidades HTML5 Multimedia<br>(Audio y Video)<br>AutoPlay + Unmute (On Event Click)<br>Scripts:<br> API Rest (Clima) - JS Reloj<br>JS Filtro y Busqueda<br>En Array de Productos/Items .
+            </p>
+		<p><br></p>
+            <p>
+                Se agradece infinitamente al profesor por los conceptos aportados y el nivel de profesionalismo de la capacitación brindada.<br>
+            </p>
+		<p><br></p>		
+	    <p>Visítanos en nuestra ubicación en Entre Ríos 678, Buenos Aires, Capital Federal.<br></p>
+	    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13131.754406506725!2d-58.39208481613232!3d-34.618025913634955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad0eb2ac76d%3A0x764d8a6b2df5525!2sEntre%20R%C3%ADos%20678%2C%20C1079%20AAS%2C%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+        </section>
+
+	<section id="comunidad">
+	    <h2>Únete a Nuestra Comunidad</h2>
+	    <p>
+	        Te invitamos a ser parte de nuestra comunidad y mantenerte conectado en nuestras redes sociales. <br><br>
+	        Síguenos en Facebook, Instagram, YouTube y únete a nuestro servidor de Discord para interactuar con otros usuarios, compartir tus 	experiencias y estar al día con las últimas novedades.
+	    </p>
+	   <p><br></p>
+	    <ul class="social-links">
+	        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+	        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+	        <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+	        <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+	    </ul>
+	   <p><br></p>
+	</section>
+
+        <section id="contacto">
+		<form action="https://formspree.io/f/mvgozqpz" method="POST" target="_blank">
+
+		  <label>Nombre:<input type="text" name="nombre" placeholder="Aqui Su Nombre"></label>
+		  <label>Apellido:<input type="text" name="apellido" placeholder="Aqui Su   Apellido"></label>
+		  <label>Mail:<input type="email" name="email" placeholder="usuario@dominio.com"></label>
+		  <label>Mensaje:<textarea name="message" placeholder="Aqui su mensaje..."></textarea></label>
+		  <button type="reset">Borrar</button>
+		  <button type="submit">Enviar</button>
+		</form>
+	    </main>
+        </section>
+
+	<!-- Section BuscarFiltros -->
+	    <section id="buscarfiltros">
+	        <div class="content">
+	            <h2>Filtros</h2>
+	            <div class="buttons">
+	                <button>Todos</button>
+	                <button>Mods</button>
+	                <button>Aplicaciones</button>
+	                <button>Objetos</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+	</section>
+
+<section class="cards">
+    <!-- Aquí se generarán las tarjetas dinámicamente -->
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-block">
+            <img src="img/logo.png" width=64px alt="Footer Logo" class="footer-logo">
+            <p>BaseGamePlusMods</p>
+            <p>123 Calle Falsa</p>
+            <p>Ciudad Imaginaria</p>
+            <p>País Inventado</p>
+        </div>
+        <div class="footer-block">
+            <p>Mapa del Sitio</p>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#comunidad">Comunidad</a>
+                <a href="#descargas">Descargas</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#registro">Registro</a>
+                <a href="#login">Login</a>
+        </div>
+        <div class="footer-block">
+            <p>Redes Sociales</p>
+	        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+	        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+	        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+	        <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+        </div>
+        <div class="footer-block">
+            <p>Newsletter</p>
+            <form>
+                <input type="text" placeholder="Nombre y Apellido">
+                <input type="email" placeholder="E-mail">
+                <button type="submit">SUSCRIBIRSE</button>
+            </form>
+        </div>
+    </footer>
+
+	<script src="goontop.js"></script>
+	<script src="filterbuttons.js"></script>
+
+</body>
+</html>
