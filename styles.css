@@ -402,34 +402,74 @@ button[type="submit"] {
 
 /* Footer */
 footer {
-    background-color: #0077cc;
+    background-color: #005ea6; /* Fondo azul */
     color: #ffffff;
     padding: 16px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
+
+/* Configuración para distintos dispositivos */
+@media (min-width: 1024px) { /* Desktop y HQ */
+    footer {
+        grid-template-columns: repeat(4, 1fr); /* 4 bloques en una misma línea */
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) { /* Tablet */
+    footer {
+        grid-template-columns: repeat(2, 1fr); /* 2 bloques por fila */
+    }
+}
+
+@media (max-width: 719px) { /* Mobile */
+    footer {
+        grid-template-columns: 1fr; /* Un bloque por fila */
+    }
+}
+
+/* Bloques del footer */
 .footer-block {
     text-align: center;
 }
+
+/* Logo del footer */
 .footer-logo {
     margin-bottom: 8px;
 }
+
+/* Textos y enlaces dentro de cada bloque */
 .footer-block p, .footer-block a {
     font-size: 0.85em;
     margin: 4px 0;
     color: #ffffff;
 }
+
 .footer-block a {
     text-decoration: none;
 }
+
 .footer-block a:hover {
     color: #3ea6ff;
 }
+
+/* Listas en el segundo y tercer bloque */
+.footer-block:nth-child(2) a,
+.footer-block:nth-child(3) a {
+    display: block; /* Un elemento debajo del otro */
+    margin: 4px 0; /* Espaciado entre elementos */
+}
+
+/* Formulario Newsletter en el cuarto bloque */
 .footer-block form {
     display: flex;
     flex-direction: column;
+    background-color: #005ea6; /* Fondo azul */
+    color: #ffffff; /* Texto blanco */
+    padding: 16px;
+    border-radius: 4px;
 }
+
 .footer-block input, .footer-block button {
     margin: 4px 0;
     padding: 8px;
@@ -437,15 +477,23 @@ footer {
     border-radius: 4px;
     font-size: 0.85em;
 }
+
+.footer-block input {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #005ea6; /* Texto azul */
+}
+
 .footer-block button {
     background-color: #ffffff;
     color: #0077cc;
     cursor: pointer;
 }
+
 .footer-block button:hover {
-    background-color: #005ea6;
+    background-color: #3ea6ff;
     color: #ffffff;
 }
+
 
 #goToTopButton {
     position: fixed;
